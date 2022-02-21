@@ -1,0 +1,6 @@
+- name: Docker installation and PosrgeSQl image deployment 
+  hosts: all 
+  gather_facts: yes 
+  roles: 
+          - add_docker
+          - create_containers 
