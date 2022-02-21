@@ -1,0 +1,14 @@
+---
+# tasks file for create_containers
+   - name: Pull PostgreSQL docker image ## пул образа
+     docker_image: 
+       name: "{{container_image}}"
+       source: pull 
+
+   - name: Create PostgreSQL containers ## создание контейнера 
+     docker_container: 
+       name: "{{container_name}}{{item}}"
+       image: "{{container_image}}"
+       command: "{{container_command}}"
+       state: present 
+     with_sequence: count={{create_containers}}

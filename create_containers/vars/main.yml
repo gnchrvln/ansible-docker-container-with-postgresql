@@ -1,0 +1,6 @@
+---
+# vars file for create_containers
+   container_image: postgres
+   container_name: postgresql
+   container_command: docker start "{{container_name}}"
+   create_containers: 2
