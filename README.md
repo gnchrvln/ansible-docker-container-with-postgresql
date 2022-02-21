@@ -13,7 +13,7 @@ Fist you need to create 2 roles with command:
 
 >ansible-galaxy init create_containers
 
-When you created a roles ansible automatically creates some directories:
+When you have created a roles ansible automatically creates some directories:
 - files
 - handlers
 - meta
