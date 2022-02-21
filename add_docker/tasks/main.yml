@@ -1,0 +1,25 @@
+---
+# tasks file for add_docker
+   - name: Update all packages ## обновляем 
+     apt: update_cache=yes force_apt_get=yes cache_valid_time=3600
+
+   - name: Upgrade all packages ## устанавливаем 
+     apt: upgrade=dist force_apt_get=yes  
+
+   - name: Install requried system packages ## установка необходимых пакетов для системы 
+     apt: 
+      pkg: "{{packages}}"
+
+   - name: Add Docker GPG apt key ## добавляем ключ 
+     apt_key:
+       url: https://download.docker.com/linux/ubuntu/gpg
+       state: present 
+
+   - name: Update apt and install docker ## устанавливаем 
+     apt: update_cache=yes name=docker-ce state=latest  
+
+   - name: Install docker module for python ## добавляем модули для питона 
+     pip:
+       name: docker  
+
+
