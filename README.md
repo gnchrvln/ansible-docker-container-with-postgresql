@@ -3,9 +3,13 @@
 My **ansible --version** is: 
 
 > $ ansible --version
+
 > ansible [core 2.12.2]
+
 > python version = 3.8.10 (default, Nov 26 2021, 20:14:08) [GCC 9.3.0]
+
 > jinja version = 2.10.1
+
 > libyaml = True
 
 Fist you need to create 2 roles with command: 
